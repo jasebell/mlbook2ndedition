@@ -1,0 +1,15 @@
+#!/bin/bash
+
+echo "Creating environment variables."
+
+export KAFKA_HOME=/usr/local/
+export ZK_CONNECT=localhost:2181
+
+export KAFKA_EVENT_CONSUMER_GROUP=kafka_event_consumer_group
+export KAFKA_TRAIN_CONSUMER_GROUP=kafka_train_consumer_group
+export KAFKA_PREDICTION_CONSUMER_GROUP=kafka_prediction_consumer_group
+
+export KAFKA_EVENT_TOPIC=event_topic
+export KAFKA_TRAIN_TOPIC=training_data_topic
+export KAFKA_PREDICT_REQ_TOPIC=prediction_request_topic
+export KAFKA_PREDICT_RES_TOPIC=prediction_response_topic

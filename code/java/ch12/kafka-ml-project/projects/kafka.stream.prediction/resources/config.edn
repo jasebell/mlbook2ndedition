@@ -1,0 +1,5 @@
+{:zookeeper #profile {:local "localhost:2181/"
+                      :staging "master.mesos:2181/dcos-service-confluent-kafka"}
+ :kafka {:consumer-group "kafka-event-predictions"
+         :input-topic "prediction_request_topic"
+         :output-topic "prediction_response_topic"}}

@@ -1,0 +1,17 @@
+#
+# Crontab entry for Kafka DL4J MLP training.
+#
+# Daily run at 0100
+
+# Run the decision tree builder
+0 1 * * * /opt/mlbook/projects/dl4j.mlp/scripts/rundtr.sh > /var/log/kafka-dl4j-training.log 2>&1
+
+# Run the linear regression builder
+30 1 * * * /opt/mlbook/projects/dl4j.mlp/scripts/runslr.sh > /var/log/kafka-dl4j-training.log 2>&1
+
+# Run the multi layer perceptron builder.
+45 1 * * * /opt/mlbook/projects/dl4j.mlp/scripts/runmlp.sh > /var/log/kafka-dl4j-training.log 2>&1
+
+
+# Models are built every night, scripts can also be triggered by the event_topic
+

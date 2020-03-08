@@ -1,0 +1,12 @@
+in:
+  type: file
+  path_prefix: '/home/jason/./work/embulkscripts/sampledata/scenario1/output'
+out:
+  type: mysql
+  host: localhost
+  user: root
+  password: xxxxx
+  port: 3306
+  table: scenario1
+  database: embulktest 
+  mode: insert

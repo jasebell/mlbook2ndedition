@@ -1,0 +1,5 @@
+in:
+  type: file
+  path_prefix: '/home/jason/./embulkdata/sample_'
+out:
+  type: stdout

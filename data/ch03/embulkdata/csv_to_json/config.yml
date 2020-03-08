@@ -1,0 +1,24 @@
+in:
+  type: file
+  path_prefix: data.csv
+  parser:
+    type: csv
+    charset: UTF-8
+    newline: CRLF
+    null_string: 'NULL'
+    skip_header_lines: 1
+    comment_line_marker: '#'
+    columns:
+      - {name: time,  type: timestamp, format: "%Y-%m-%d"}
+      - {name: id, type: long}
+      - {name: name, type: string}
+      - {name: score, type: double}
+filters:
+  - type: to_json
+    column:
+      name: test
+      type: string
+    skip_if_null: [id]
+    default_timezone: Asia/Tokyo
+out:
+  type: stdout

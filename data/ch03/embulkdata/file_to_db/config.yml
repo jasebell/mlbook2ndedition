@@ -1,0 +1,21 @@
+in:
+  type: file
+  path_prefix: /home/jason/./work/embulkscripts/sampledata/scenario1/output
+  parser:
+    charset: UTF-8
+    newline: CRLF
+    type: csv
+    delimiter: ','
+    quote: '"'
+    escape: '"'
+    trim_if_not_quoted: false
+    skip_header_lines: 1
+    allow_extra_columns: false
+    allow_optional_columns: false
+    columns:
+    - {name: userid, type: long}
+    - {name: itemid, type: long}
+    - {name: rating, type: double}
+    - {name: timestamp, type: long}
+out: {type: mysql, host: localhost, user: root, password: admin, port: 3307, table: scenario1,
+  database: embulktest, mode: insert}

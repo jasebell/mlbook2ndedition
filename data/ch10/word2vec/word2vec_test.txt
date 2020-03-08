@@ -1,0 +1,331 @@
+Chapter 1
+
+What Is Machine Learning?
+
+Let’s start at the start, looking at what machine learning actually is, it’s history and where it is used in industry. I’ll also run down some of the software used throughout the book too so you can have everything installed and be ready to get working on the practical things.
+
+The Definition Of Machine Learning
+
+So what is the definition of machine learning? Over the last six decades we’ve had the pioneers steering us in the right direction.
+
+Alan Turing
+
+Alan Turing posed the question, “Can machines think?” in his 1950 paper “Computing Machinery and Intelligence”. The paper went on to suggest the “Imitation Game” where three participants, a human acting as a judge, another human and a computer which is attempting to convince the judge that it is human. The judge would type into a terminal program and “talk” to the other two participants. Both the human and the computer respond and the judge decide which is the computer. During the test if the judge consistently can’t tell the difference between the human and computer responses then the computer has won the game.
+
+The test goes on today in the form of the Loebner Prize which is an annual competition in artificial intelligence. The aim is simple enough; convince the judges that they are chatting to a human instead of a computer chat bot program.
+
+Arthur Samuel
+
+“[A] Field of study that gives computers the ability to learn without being explicitly programmed” was the definition of machine learning that Arthur Samuel gave back in 1959. Samuel is credited to have one of the self-learning computer programs with his work at IBM, he focused on games as a way of getting the computer to learn things.
+
+The game of choice for Samuel was checkers as it was a simple game but with enough strategy involved that the program could learn from. With the use of alpha-beta evaluation pruning and minimax strategies the program would discount moves and thus improve costly memory performance of the program.
+
+While Samuel is widely know for his work in artificial intelligence he was also noted for being one of the first programmers to use hash tables, he certainly made a big impact at IBM.
+
+Tom M. Mitchell
+
+Tom M. Mitchell is the Chair of Machine Learning at Carnegie Mellon University. As author of the book “Machine Learning” he is much quoted with the definition:
+
+“A computer program is said to learn from experience E with respect to some class of tasks T and performance measure P, if its performance at tasks in T, as measured by P, improves the experience E.”
+
+The important thing here is that we now have a set of objects to define our machine learning.
+
+• Task (T), either one or more.
+• Experience (E)
+• Performance (P)
+So with a computer running a set of tasks the experience should be leading to performance increases.
+
+To Sum Up
+
+Machine learning is a branch of artificial intelligence. Using computing we design systems that can learn from data in either a manner of being trained or not. The systems may learn and improve with experience and with time refine a model that can be used to predict outcomes of questions based on the previous learning.
+
+
+
+Algorithmic Types For Machine Learning
+
+There are a number of different methods that can be employed to machine learning. The deciding factor on what algorithm to use is really based on the required output. As you work through the chapters you’ll see the different algorithm types being put to work.
+
+Supervised Learning
+
+When we talk about supervised learning we are working a set of labeled training data. For every example in the training data we have an input object and an output object. An example would be classifying Twitter data (I’ll be using Twitter data lot in the final two chapters) lets assume we have the following data from Twitter, this would be our input data objects.
+
+Really loving the new St Vincent album!
+#fashion I’m selling my Louboutins! Who’s interested? #louboutins
+I’ve got my Hadoop cluster working on a load of data. #data
+In order for our supervised learning classifier to know the outcome result of each tweet we have to manually put the answers in, for clarity I’ve added the resulting output object at the start of the line.
+
+music​​Really loving the new St Vincent album!
+clothing​#fashion I’m selling my Louboutins! Who’s interested? #louboutins
+bigdata​​I’ve got my Hadoop cluster working on a load of data. #data
+Obviously for the classifier to make any sense of the data when run properly we’ll have to manually work on a lot more input data. What we have though is a training set that can be used for later classification of data.
+
+There are issues with supervised learning that have to be taken in to account. The bias-variance dilemma is one of them, how the machine-learning model performs accurately against different training sets. With high bias models with restricted learning or high variance, which learn with complexity against noisy training data. There’s a trade off between the two. The key is where to settle with the trade off.
+
+Unsupervised Learning
+
+On the opposite side of the coin, unsupervised learning is where we let the algorithm just find a hidden pattern in a load of data. There’s no error in the solution we propose it’s just a case of running the machine-learning algorithm and seeing what comes out.
+
+The mention of unsupervised learning may be more a case of just data mining. If you’re looking at clustering data then there’s a good chance you’re going to spend a lot of time with unsupervised learning.
+
+The Human Touch
+
+Outcomes will change, data will change and requirements will change. Machine learning cannot be seen as the write it once solution to problems. Also it will require human hands to and intuition to write these algorithms to start off with. Remember that Arthur Samuel’s checkers program was basically to improve on what the human had already taught it. It all started off with a human first and it’s important that we get this message across.
+
+During the course of this book you will see me talk about the importance of knowing what the question is we are trying to answer, the cornerstone of any data project, this starts with us having open discussions and planning (more of this in chapter 2).
+
+It’s only in very rare circumstances that you can throw data at a machine learning routine and it start to provide insight.
+
+Uses For Machine Learning
+
+So what can we use machine learning for? Quite a lot really, when you break things down and see how it’s being used at the moment.
+
+Software
+
+Spam Detection
+
+“I don’t like Spam!” said the Monty Python team. For all the junk mail that gets caught there’s a good chance there’s a Bayesian classification filtering doing the work to catch it. Since the early days of SpamAssassin to Google’s work in Google Mail there’s been some form of learning attempting to figure out whether a message is good or bad.
+
+Spam detection is one of the classic uses of machine learning and over time the algorithms have got better and better. Think about the email program that you use when it sees a message it thinks is junk it will ask you to confirm whether it is or isn’t. If you decide it is the system will learn from that message and learn from the experience. Future messages will, hopefully, be treated correctly from then on.
+
+Voice Recognition
+
+Apple’s Siri service that is on many iOS devices is another example of software machine learning. You ask Siri something and it works out what you want to do. This may be sending a tweet or a text message or it could be setting a calendar appointment, if Siri decides it can’t work out what you’re trying to do it will perform a Google search on the phrase you said.
+
+It’s an impressive service that is using a device and cloud based statistical model to analyze your phrase, the order of the words and come up with a resulting action to do on the device.
+
+Trading
+
+There are lots of trading platforms aiming to help users to do better stock trades. This comes with a large amount of analysis, computation and recommendation. From a machine learning perspective decisions are being made to you on whether to buy or sell a stock based at the current price. It takes in to account the historical opening and closing prices and the buy sell volumes of that stock.
+
+With four pieces of information (the low and high price plus the opening and closing price of the day) a machine learning algorithm can learn. Apply this will all stocks and you have a system.
+
+Bitcoins are a good example of trading; the virtual coins are bought and sold on what price the market is willing to buy against what existing coin owners are willing to sell at.
+
+The press is much more interested in algorithmic trading especially of the high-speed variety. The ability to perform many thousands of trades a second based on algorithmic prediction is very compelling. A huge amount of money is ploughed into these systems and how close they are to the main stock trading exchanges. Milliseconds of network latency can cost the trading house millions in trades that weren’t placed in time.
+
+About 70% of the trades done are performed by machine and not on the trading floor. This is all very well when things are going fine but when a problem occurs it can be minutes before the fault is noticed, by which time so many trades have happened. The flash crash in May 2010 is a good example of this when the Dow Jones industrial average dived by 600 points.
+
+Robotics
+
+Using machine learning robots can acquire skills or learn to adapt to the environment it is working in. Activities such as object placement, grasping objects and locomotion skills are achieved with either automated learning or learning via human intervention.
+
+With the increasing amount of sensors within robotics other algorithms could be employed outside of the robot for further analysis.
+
+Medicine And Healthcare
+
+The race is on for machine learning to be used in healthcare analytics. A number of startups are looking at the advantages of using machine learning with Big Data to provide healthcare professionals better-informed data to enable them to give better decisions.
+
+IBM’s famed Watson supercomputer, once used to win the television quiz programme Jeopardy against two human contestants, is being used to help doctors. Using Watson as a service on the cloud doctors can access learning on millions of pages of medical research and hundreds of thousands of pieces of information on medical evidence.
+
+With the number of consumers using smartphones and the related devices for collating a range of health information such as weight, heart rate, pulse, pedometers, blood pressure and even blood glucose monitoring we can now track and trace user health regularly and see patterns in dates and times. Machine learning systems can recommend healthier alternatives back to the user via the device.
+
+While it’s easy enough to analyze data the privacy of user health data is another story. Obviously some users are more concerned about how their data is used especially in the case of it being sold on to third party companies. Analytics in healthcare and medicine is new at the volumes that are now available but the privacy debate will be the ultimate deciding factor about how the algorithms will be used.
+
+
+
+Advertising
+
+Since the dawn of time there’s always been a brand trying to influence us to buy their produce. Post 1995 and the Internet gave marketers the chance to advertise direct to our screens without the need of television or large print campaigns. Remember the thought of cookies being on our computers with the potential to track us? The race to disable cookies from browsers and control whom saw our habits was big news at the time.
+
+Log file analysis is another tactic that advertisers use to see the things we are interested in. They are able to cluster results and segment user groups who may be interested in specific types of products. Couple that with mobile location awareness and you have direct-targeted adverts sent direct to you.
+
+There was a time this was considered a huge invasion of privacy but over time we’ve gotten use to the idea, now we’re even happy to check in at a location and announce our arrival. All very well but don’t think no one is watching, far from it, plenty will be learning from it. With some learning and analysis advertisers can do a very good job in figuring out where you’ll be on a given day and attempt to push offers your way.
+
+Retail And E-Commerce
+
+Machine learning is heavily used in retail, both e-commerce and bricks and mortar retail. At the high level the obvious use case is the loyalty card, you may be in possession of some. Retailers that issue loyalty cards often struggle to make sense of the data that’s coming back to them. Having worked with one company that analyzed this data I know the pain that supermarkets go through to get insight.
+
+In the UK supermarket giant Tesco are the name in the UK when it comes to a customer loyalty programme. The Tesco Clubcard is used heavily by customers and gives Tesco a great view of customer purchasing decisions. Data is collected from the point of sale (POS) and fed back to a data warehouse. In the early stages of the Clubcard the data couldn’t be mined fast enough, there was just too much. As processing methods improved over the years Tesco have a very good strategy along with marketing company Dunn Humby about customer behavior, shopping habits and encouraging customers to try similar products away from their usual choices.
+
+For the American equivalent we have to look at the likes of Target who run a similar sort of program that tracks every customer engagement with the brand. This might be via mail outs, web site visits or even in-store visits. From the data warehouse Target can fine-tune how to get the right communication method to the right customer in order for them to react to the brand. Target learned that not every customer wants an email or a SMS message, some still prefer receiving mail via the postal service.
+
+The uses for machine learning in retail are obvious, mining baskets and segmenting users are key processes in order to communicate the right message to the customer. On the other hand it can too accurate and cause headaches. Target’s baby club story, that was widely cited in the press as a big privacy danger in Big Data, showed us that machine learning basically can easily know that we’re creatures of habit and when those habits change they will get noticed.
+
+For all the positive uses of machine learning there are some urban myths too. Talk of retail and data mining the “beer and diapers” story is often mentioned and associated with Walmart and other large retailers. The idea was that on a Friday the sales of beer and diapers would right together suggesting that the child’s mother was going out and dad would stock up on beer for while he was at home and diapers for the one he was looking after. It turned out to be a myth, thought this still doesn’t stop marketing companies wheeling out the story (and still believing it’s true) to organizations who want to learn from their data.
+
+Likewise the heavy metal band Iron Maiden did not mine bit-torrent data to figure out which countries were illegally downloading their songs and then fly to play to fans. Another myth that got the marketers and media very exited about Big Data and machine learning, but sadly untrue. Not to say that these can’t happen, they just haven’t happened yet.
+
+Gaming Analytics
+
+We’ve already established that checkers is a good candidate for machine learning. Do you remember those old chess computer games with the real plastic pieces? You made a move and the computer made a move. Well that’s machine learning planning algorithms in action. Fast-forward a few decades (the chess computer still feels like yesterday to me) and the console market is pumping out analytics data every time you play your favorite game.
+
+Microsoft have spent time studying the data from Halo 3 to see how players perform on certain levels but also figure out when a player is using a cheat. Fixes have been created based on the analysis of data coming back from the consoles.
+
+The same company also worked on Drivatar that is incorporated in to the driving game Forza Motorsport. When the game is first played it knows nothing about your driving style. Over a period of practice laps the system learns your style, consistency, exit speeds on corners and your positioning on the track. The sampling happens over three laps which is enough time to see how your profile behaves. As time progresses the system continues to learn from your driving patterns.
+
+If you have children you may have seen the likes of Ninendogs (or cats) where it’s your task to look after an on-screen pet. Think a Tamagotchi but on a larger scale. Algorithms can work out when the pet needs play, how to react to the owner and how hungry the pet will be.
+
+It’s early days for games companies to get machine learning into infrastructure to make the games better. With more and more games appearing on small devices such as the iPhone and Android platforms the real learning is on how to make players come back and play more and more. Analysis can be performed about the “stickiness” of the game, do players return to play again or do they drop off over a period of time in favor of something else. Ultimately there’s a trade off between the level of machine learning and gaming performance especially in smaller devices.
+
+The Internet Of Things
+
+Connected devices that can collate all manner of data are sprouting up all over the place. Device to device communication is hardly new but it hadn’t really hit the public minds until much later on. With the low cost of manufacture and distribution devices are in the home just as much as they are in industry.
+
+Uses include home automation, shopping, and smart meters for measuring energy consumption. These things are in their infancy and there’s still a lot of concern on the security aspects of these devices. In the same way phone based location is a concern we can pin point devices by their unique id’s and eventually associate them to a user.
+
+On the plus side the data is so rich that there’s plenty of opportunity to put machine learning in the heart of the data and learn from the devices output. This may be as simple as monitoring a house to sense ambient temperature, is it too hot or too cold?
+
+It’s very early days for the Internet of things but there’s a lot of groundwork happening and it’s leading to some interesting outcomes. With the likes of Arduino and Raspberry Pi computers it’s relatively cheap to get started with hardware and measuring the likes of motion, temperature and sound then extracting the data for analysis either collated or in real time.
+
+Languages For Machine Learning
+
+For this book I’ll be using the Java programming language for the working examples. The reasons are simple, it’s a widely used language and the libraries are well supported. What I’m not saying is that Java is the only language to be used for machine learning far from it. If you’re working for an existing organization you may be restricted to the languages used within it.
+
+Python
+
+The Python language has increased in usage as it’s easy to learn and easy to read. It also has some good machine learning libraries such as scikit-learn, PyML and pybrain. Jython was developed as a Python interpreter for the Java Virtual Machine (JVM) which may be worth investigating.
+
+R
+
+R is an open source staticstical programming language. The syntax is not the easiest to learn but I do encourage you to have a look at it. It also has a large number of machine learning packages and visualization tools. The RJava project allows Java programmers to access R functions from Java code.
+
+Matlab
+
+The Matlab language is used widely within academia for technical computing and algorithm creation. Like R it also has a facility for plotting visualizations and graphs.
+
+Scala
+
+A new breed of languages are emerging that take advantage of Java’s runtime environment, which potentially increases performance, based on the threading architecture of the platform. Scala (Scalable Language) is one of these and is being widely used by a number of startups.
+
+There are machine-learning libraries such as ScalaNLP but as Scala can access Java jar files it can also implement the likes of Classifier4J and Mahout which are covered in this book.
+
+Clojure
+
+Another JVM based language Clojure is based on the Lisp programming language. It’s designed for concurrency, which makes it a great candidate for machine learning applications on large sets of data.
+
+Ruby
+
+While many people know the Ruby language by association with the Ruby On Rails web development framework it’s also used as a standalone language. The best way to integrate machine learning frameworks is to look at JRuby which is a JVM based alternative, this means you can access the Java machine learning libraries.
+
+Language Summary
+
+As with most languages there is a lot of cross over in functionality. With the languages that access the JVM there’s a good chance that you’ll be access Java based libraries. There’s no such thing as one language being “better” than another. It’s a case of picking the right tool for the job. For the remainder of the book I’ll be using Java.
+
+Software Used In This Book
+
+For the hands on elements in the book we’ll be using a number of programs and packages to get our algorithms and machine learning working.
+
+To keep things easy I strongly advise that you create a directory on your system to install all these packages. I’m going to call mine “mlbook”.
+
+$mkdir ~/mlbook
+$cd ~/mlbook
+Checking The Java Version
+
+As the programs we’re installing rely on Java we’ll quickly check the version, the programs we’re working with will require Java 1.6 or above. To check open up a terminal window and run the following:
+
+$ java -version
+java version "1.7.0_40"
+Java(TM) SE Runtime Environment (build 1.7.0_40-b43)
+Java HotSpot(TM) 64-Bit Server VM (build 24.0-b56, mixed mode)
+If you are running below 1.6 then you will need to upgrade your Java version. You can download the more up to date version from http://www.oracle.com/technetwork/java/javase/downloads/index.html[LINK: http://www.oracle.com/technetwork/java/javase/downloads/index.html]
+
+Weka Toolkit
+
+The Weka (Waikato Environment for Knowledge Acquisition) is a machine learning and data mining toolkit written in Java by the University of Waikato in New Zealand.
+
+It provides a suite of tools for learning and visualization via the supplied workbench program or the command line. Weka also enables you to retrieve data from existing data sources that have a JDBC driver. With Weka you can do the following:
+
+• Pre-process data
+• Clustering
+• Classification
+• Regression
+• Association rules
+The Weka toolkit is widely used and now supports the Big Data aspects by interfacing with Hadoop for clustered mining.
+
+Downloading And Installing
+
+Weka can be downloaded from the University of Waikato website at http://www.cs.waikato.ac.nz/ml/weka/downloading.html[LINK: http://www.cs.waikato.ac.nz/ml/weka/downloading.html].
+
+There are versions of Weka available for Linux, Mac OSX and Windows. To install Weka on Linux it’s a case of unzipping the supplied file to a directory. On Mac OSX and Windows an installer program is supplied and will unzip all the required files for you.
+
+Mahout
+
+The Mahout machine learning libraries are an open source project and now part of the Apache project. The key word is for Mahout is scalable; it will work either on a single node or a cluster of machine. There’s tight integration with the Hadoop Map/Reduce paradigm to enable large scale processing.
+
+​​There are a number of supported algorithms including:
+
+• Naive Bayes Classifier
+• K Means Clustering
+• Recommendation Engines
+• Random Forest Decision Trees
+• Logistic Regression Classifier
+
+
+There’s no workbench in Mahout as there is with the Weka toolkit but the emphasis is in integrating machine learning library code within your projects. There are a wealth of examples and ready to run programs that can be used with your existing data.
+
+Downloading And Installing
+
+You can download Mahout from http://www.apache.org/dyn/closer.cgi/mahout/[LINK: http://www.apache.org/dyn/closer.cgi/mahout/].
+
+As Mahout is platform independent there’s one download that covers all the operating systems. To install all you have to do is unzip Mahout into a directory and update your path to find the executable files.
+
+SpringXD
+
+While Weka and Mahout concentrate on algorithms and producing the knowledge we need think about acquiring data and processing it.
+
+Spring XD is a “data ingestion engine” which reads in, processes and stores raw data. It’s highly customizable with the ability to create processing units. It also integrates with all the other tools being talked about in this chapter.
+
+The project is relatively new but it’s certainly a useful one to get to grips with now as it doesn’t just relate to Internet based data it can also ingest network and system messages across a cluster of machines.
+
+Downloading And Installing
+
+The Spring XD distribution can be downloaded from http://projects.spring.io/spring-xd/ look for the “quick start” section and you will see the link for the zip file.
+
+Once the zip file has downloaded all you need to do is unzip the distribution into a directory. For a detailed walk through of using Spring XD have a look at Chapter 9 when we work with data in real time.
+
+Hadoop
+
+Unless you’ve been living on some secluded island without power and an Internet connection you will have heard about the savior of Big Data, Hadoop. While Hadoop is very good for processing Big Data it’s not a required element. We’ll be using it in Chapter 10 for working with batch processing.
+
+Hadoop is a framework for processing data in parallel, it does this using the MapReduce pattern where work is divided into blocks and distributed across a cluster of machines. You can use Hadoop on a single machine with success and this is what we will cover.
+
+There are two versions of Hadoop, we’ll be using version 1.2.1 though things are progressing in version 2. For our needs though the version 1.2.1 is going to be fine to learn on.
+
+Downloading And Installing
+
+The Apache Foundation run a series of mirror download servers and will refer you to the ones relevant to your location. The main download page is at http://www.apache.org/dyn/closer.cgi/hadoop/common/ .
+
+Once you have picked your mirror site nagivate your way through to hadoop-1.2.1 releases and download the hadoop-1.2.1-bin.tar.gz. Unzip and untar the distribution to a directory.
+
+If you are running a RedHat or Debian server you can download the respective .rpm or .deb files and install them via the package installer for your operating system
+
+Using An IDE
+
+Along with favorite actor/actress, or best football team the discussion about which is the best integrated development environment (IDE) to use seems to spark furious debate within some circles.
+
+I’m an Eclipse user, I’m also an IDEA user and I have Netbeans as well. Basically I use all three. There’s no hard rule which IDE to use as they all do the same thing very well. For examples in this book though I’ll be using Eclipse (Juno release).
+
+Finding Data To Play With
+
+One question that comes up again and again with my classes is “where can I get data from?” There are a few answers to this question but it does depend on what you are trying to learn.
+
+Data comes all shapes and sizes, something we’ll discuss further in the next chapter. I strongly suggest that you take some time to hunt around the Internet for different data sets and just look through them. You’ll get a feel of how these things are put together. Sometimes it’s comma separated variable (CSV) data or it may be structured as JSON or XML.
+
+Data Repositories
+
+So, where to look? There are plenty of places to get data from. Let’s take a look at a selection of them.
+
+UC Irvine Machine Learning Repository
+
+The machine learning repository consists over 270 data sets. Included in these sets are notes on the variable name, instances and the tasks the data would be associated with.
+
+http://archive.ics.uci.edu/ml/datasets
+Infochimps
+
+The data marketplace at Infochimps has been around for a few years now. While the company has expanded to cloud based offerings the data is still available to download.
+
+http://www.infochimps.com/datasets
+Kaggle
+
+The competitions that Kaggle run have gained a lot of interest over the last couple of years. If you look at the “101” section there are some data sets to experiment with.
+
+https://www.kaggle.com/competitions
+
+
+May I emphasize the word “play” Some of the best learning comes from playing with the data. Having a question in mind that you are trying to answer with the data is a good start (and something you will see me refer to a number of times in this book) but learning comes from experimentation and improvement on results. So I’m all for playing around with the data first and seeing what works. I come from a very pragmatic background when it comes to development and learning. While the majority of publications have come from very academic backgrounds, and I fully endorse and support them, we shouldn’t discourage learning machine learning by doing.
+
+Conclusion
+
+In this chapter we’ve looked at what machine learning is, how it can be applied to different areas of business and also covered the tools we’ll be using during the remainder of the book.
+
+The next chapter we will look at planning for machine learning. This looks at data science teams, cleaning, different methods of processing data and also an overview of some handy Unix commands.

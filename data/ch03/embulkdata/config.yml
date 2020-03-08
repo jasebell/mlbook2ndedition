@@ -1,0 +1,32 @@
+in:
+  type: file
+  path_prefix: /home/jason/./embulkdata/sample_
+  parser:
+    charset: UTF-8
+    newline: LF
+    type: csv
+    delimiter: ','
+    quote: '"'
+    escape: '"'
+    trim_if_not_quoted: false
+    skip_header_lines: 1
+    allow_extra_columns: false
+    allow_optional_columns: false
+    columns:
+    - {name: Number, type: long}
+    - {name: Title, type: string}
+    - {name: GivenName, type: string}
+    - {name: MiddleInitial, type: string}
+    - {name: Surname, type: string}
+    - {name: City, type: string}
+    - {name: ZipCode, type: string}
+    - {name: Country, type: string}
+    - {name: EmailAddress, type: string}
+    - {name: Username, type: string}
+    - {name: Age, type: long}
+    - {name: Occupation, type: string}
+    - {name: Company, type: string}
+    - {name: GUID, type: string}
+    - {name: Latitude, type: double}
+    - {name: Longitude, type: double}
+out: {type: stdout}
